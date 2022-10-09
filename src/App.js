@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import image from './logo192.png';
+import image from './images/sig.png';
 function App() {
   return (
     <div className="App">
@@ -18,11 +18,7 @@ function App() {
           <div className="card card-front">
             <table>
               <tr>
-                <td rowSpan={3}>
-                  <div className="card-image">
-                    <img src={image} alt="me" />
-                  </div>
-                </td>
+
                 <td>
                   <div className="card-text">
                     <h2>Abubakar M. Yarimawa</h2>
@@ -40,9 +36,9 @@ function App() {
                     <i className="svg reactjs"></i>
                     <i className="svg redux"></i>
                     <i className="svg bootstrap"></i>
-                    <i className="svg sql"></i>
-                    <i className="svg postgresql"></i>
+                    <i className="svg mysql"></i>
                     <i className="svg mongodb"></i>
+                    <i className="svg postgresql"></i>
                   </div>
                 </td>
               </tr>
@@ -52,10 +48,11 @@ function App() {
                     <i className="svg html5"></i>
                     <i className="svg css3"></i>
                     <i className="svg sass"></i>
-                    <i className="svg aws"></i>
                     <i className="svg cmd"></i>
                     <i className="svg git"></i>
+                    <i className="svg aws"></i>
                     <i className="svg heroku"></i>
+                    <i className="svg firebase"></i>
                     <i className="svg netlify"></i>
                   </div>
                 </td>
@@ -83,7 +80,7 @@ function App() {
             for other passionate developers.
           </p>
           <h4>TECHNOLOGIES AND FRAMEWORK</h4>
-          <p>Python | Java | Django | Javascript | ReactJS | Redux | Bootstrap | SQL | MongoDB | PostgreSQL | CL/CI | Git | AWS | Heroku | Netlify</p>
+          <p>Python | Django | Java | Javascript | ReactJS | Redux | Bootstrap | MySQL | MongoDB | PostgreSQL | HTML5 | CSS3 | SCSS | CL/CI | Git | AWS | Heroku | Firebase | Netlify</p>
           <h4>CONTACT ME</h4>
           <div className="contact" id='contact'>
             <div className="card-personal-details">

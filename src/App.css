@@ -5,6 +5,7 @@
 
 body {
   background-color: #ecf0f3;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, small, li {
@@ -50,7 +51,7 @@ a, button, i {
 .App header .signature-icon button {
   width: 40px;
   height: 100%;
-  background-image: url("../public/logo192.png");
+  background-image: url("./images/sig.png");
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,22 +81,22 @@ a, button, i {
 
 .App .container {
   background-color: inherit;
-  padding: 0% 8px;
+  width: 100%;
+  padding: 0% 2%;
   padding-top: 80px;
   padding-bottom: 30px;
 }
 
 .App .container section {
-  padding: 8px;
+  padding: 2%;
   margin-bottom: 10px;
   border-radius: 10px;
   background-image: linear-gradient(to bottom right, #e0e6ea, #feffff);
   box-shadow: 0px 0px 2px -1px #8b8e92;
-  width: 405px;
+  width: 92%;
 }
 
-.App .container section:nth-child(1) {
-  width: 421px;
+.App .container section:nth-child(1) {  /* CARD-HOLDER */
   padding: 0%;
   background-image: none;
   box-shadow: none;
@@ -109,25 +110,21 @@ a, button, i {
   animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
 
-.App .container .card-placeholder {
-  position: relative;
-}
-
 .App .container .card-placeholder .card {
   display: block;
+  min-width: 94%;
   height: 150px;
   box-shadow: 0px 0px 2px -1px #1e2125;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #fff;
   border-radius: 10px;
-  padding: 8px;
+  padding: 2%;
   padding-right: 0%;
 }
 
 .App .container .card-placeholder .card-front {
   display: block;
   position: absolute;
-  width: 411px;
 }
 
 .App .container .card-placeholder .card-front .card-image {
@@ -163,7 +160,7 @@ a, button, i {
 }
 
 .App .container .card-placeholder .card-front .stack .django {
-  background-image: url("./stack/python.png");
+  background-image: url("./stack/django.png");
 }
 
 .App .container .card-placeholder .card-front .stack .java {
@@ -179,39 +176,35 @@ a, button, i {
 }
 
 .App .container .card-placeholder .card-front .stack .redux {
-  background-image: url("./stack/reactjs.png");
+  background-image: url("./stack/redux.png");
 }
 
 .App .container .card-placeholder .card-front .stack .bootstrap {
   background-image: url("./stack/bootstrap.png");
 }
 
-.App .container .card-placeholder .card-front .stack .sql {
+.App .container .card-placeholder .card-front .stack .mysql {
   background-image: url("./stack/mysql.png");
 }
 
-.App .container .card-placeholder .card-front .stack .postgresql {
-  background-image: url("./stack/postgre.svg");
+.App .container .card-placeholder .card-front .stack .mongodb {
+  background-image: url("./stack/mongodb.png");
 }
 
-.App .container .card-placeholder .card-front .stack .mongodb {
-  background-image: url("./stack/postgre.svg");
+.App .container .card-placeholder .card-front .stack .postgresql {
+  background-image: url("./stack/postgresql.png");
 }
 
 .App .container .card-placeholder .card-front .stack .html5 {
-  background-image: url("./stack/html5.svg");
+  background-image: url("./stack/html5.png");
 }
 
 .App .container .card-placeholder .card-front .stack .css3 {
-  background-image: url("./stack/css3-alt.svg");
+  background-image: url("./stack/css3.png");
 }
 
 .App .container .card-placeholder .card-front .stack .sass {
   background-image: url("./stack/sass.svg");
-}
-
-.App .container .card-placeholder .card-front .stack .aws {
-  background-image: url("./stack/python.png");
 }
 
 .App .container .card-placeholder .card-front .stack .cmd {
@@ -222,16 +215,20 @@ a, button, i {
   background-image: url("./stack/git.svg");
 }
 
+.App .container .card-placeholder .card-front .stack .aws {
+  background-image: url("./stack/aws.png");
+}
+
 .App .container .card-placeholder .card-front .stack .heroku {
-  background-image: url("./stack/python.png");
+  background-image: url("./stack/heroku.png");
+}
+
+.App .container .card-placeholder .card-front .stack .firebase {
+  background-image: url("./stack/firebase.png");
 }
 
 .App .container .card-placeholder .card-front .stack .netlify {
-  background-image: url("./stack/python.png");
-}
-
-.App .container .card-placeholder .card-front .stack .python {
-  background-image: url("./stack/python.png");
+  background-image: url("./stack/netlify.png");
 }
 
 .App .container .card-placeholder .card-back {
@@ -249,19 +246,19 @@ a, button, i {
 }
 
 .App .container .contact .email-icon{
-  background-image: url("./stack/link-45deg.svg");
+  background-image: url("./icons/link-45deg.svg");
 }
 
 .App .container .telephone-icon{
-  background-image: url("./stack/telephone.svg");
+  background-image: url("./icons/telephone.svg");
 }
 
 .App .container .contact .linkedin-icon{
-  background-image: url("./stack/linkedin.svg");
+  background-image: url("./icons/linkedin.svg");
 }
 
 .App .container .contact .github-icon{
-  background-image: url("./stack/github.svg");
+  background-image: url("./icons/github.svg");
 }
 
 .App .container .about h4 {
@@ -341,6 +338,12 @@ a, button, i {
       'projects education blank blank blank blank'
       'projects certifications blank blank blank blank';
   }
+  .App .container section {
+    width: 405px;
+  }
+  .App .container section:nth-child(1) {
+    width: 421px;
+  }  
   .App .container .card-placeholder {grid-area: card;}
   .App .container .about {grid-area: about;}
   .App .container .experience {grid-area: experience;}
