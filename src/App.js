@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import image from './images/sig.png';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,11 @@ function App() {
         </div>
       </header>
       <div className="container">
+        <section className="picture">
+          <div>
+            <img src={image} alt="me" />
+          </div>
+        </section>
         <section className="card-placeholder">
           <div className="card card-front">
             <table>
@@ -61,7 +67,7 @@ function App() {
           <div className="card card-back">
             <div className="contact">
               <div className="card-personal-details">
-                <p><i className="svg email-icon"></i><a href='#'>mayarimawa@gmail.com</a></p>
+                <p><i className="svg email-icon"></i><a href='https://google.com'>mayarimawa@gmail.com</a></p>
                 <p><i className="svg telephone-icon"></i>+2349033243110</p>
               </div>
               <div className="card-professional-details">
@@ -83,7 +89,7 @@ function App() {
           <h4>CONTACT ME</h4>
           <div className="contact" id='contact'>
             <div className="card-personal-details">
-              <p><i className="svg email-icon"></i><a href='#'>mayarimawa@gmail.com</a></p>
+              <p><i className="svg email-icon"></i><a href='https://google.com'>mayarimawa@gmail.com</a></p>
               <p><i className="svg telephone-icon"></i>+2349033243110</p>
             </div>
             <div className="card-professional-details">

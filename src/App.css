@@ -87,6 +87,17 @@ a, button, i {
   padding-bottom: 30px;
 }
 
+.App .container .picture {
+  text-align: center;
+  height: 200px;
+}
+
+.App .container .picture img {
+  background-image: linear-gradient(transparent, #feffff);
+  width: 200px;
+  height: 200px;
+}
+
 .App .container section {
   padding: 2%;
   margin-bottom: 10px;
