@@ -112,6 +112,11 @@ a, button, i {
   background-image: none;
   box-shadow: none;
 }
+.App .container section:nth-child(2) {  /* CARD-HOLDER */
+  padding: 0%;
+  background-image: none;
+  box-shadow: none;
+}
 
 .App .container .card-placeholder:hover .card-front {
   animation: twirl 0.2s ease-in forwards;
