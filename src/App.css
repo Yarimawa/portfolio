@@ -179,6 +179,10 @@ a, button, i {
   background-image: url("./stack/django.png");
 }
 
+.App .container .card-placeholder .card-front .stack .django-rest-framework {
+  background-image: url("./stack/django-rest-framework.png");
+}
+
 .App .container .card-placeholder .card-front .stack .java {
   background-image: url("./stack/java.png");
 }

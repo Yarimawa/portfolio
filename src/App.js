@@ -34,16 +34,17 @@ function App() {
               <tr>
                 <td>
                   <div className="stack">
-                    <i className="svg python"></i>
-                    <i className="svg django"></i>
-                    <i className="svg java"></i>
-                    <i className="svg javascript"></i>
-                    <i className="svg reactjs"></i>
-                    <i className="svg redux"></i>
-                    <i className="svg bootstrap"></i>
-                    <i className="svg mysql"></i>
-                    <i className="svg mongodb"></i>
-                    <i className="svg postgresql"></i>
+                    <i className="svg python" title="python"></i>
+                    <i className="svg django" title="django"></i>
+                    <i className="svg django-rest-framework" title="django-rest-framework"></i>
+                    <i className="svg java" title="java"></i>
+                    <i className="svg javascript" title="javascript"></i>
+                    <i className="svg reactjs" title="reactjs"></i>
+                    <i className="svg redux" title="redux"></i>
+                    <i className="svg bootstrap" title="bootstrap"></i>
+                    <i className="svg mysql" title="mysql"></i>
+                    <i className="svg mongodb" title="mongodb"></i>
+                    <i className="svg postgresql" title="postgresql"></i>
                   </div>
                 </td>
               </tr>
