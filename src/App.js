@@ -1,196 +1,149 @@
-// import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import image from './images/sig.png';
-function App() {
-  return (
-    <div className="App">
-      <header>
-        <div className="signature-icon">
-          <button></button>
-        </div>
-        <div className="quick-nav">
-          <a href='#contact'><button>CONTACT</button></a>
-          <a href='#about'><button>ABOUT</button></a>
-        </div>
-      </header>
-      <div className="container">
-        <section className="picture">
-          <div>
-            <img src={image} alt="me" />
-          </div>
-        </section>
-        <section className="card-placeholder">
-          <div className="card card-front">
-            <table>
-              <tr>
+import ara_icon from './images/ara.jpg';
+import thistro_icon from './images/thistro.png';
+import cyclosis_icon from './images/cyclosis.jpg';
+import galaxy_icon from './images/galaxy.jpeg';
+import github_icon from './icons/github.svg';
 
-                <td>
-                  <div className="card-text">
-                    <h2>Abubakar M. Yarimawa</h2>
-                    <i>Full Stack Developer</i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="stack">
-                    <i className="svg python" title="python"></i>
-                    <i className="svg django" title="django"></i>
-                    <i className="svg django-rest-framework" title="django-rest-framework"></i>
-                    <i className="svg java" title="java"></i>
-                    <i className="svg javascript" title="javascript"></i>
-                    <i className="svg reactjs" title="reactjs"></i>
-                    <i className="svg redux" title="redux"></i>
-                    <i className="svg bootstrap" title="bootstrap"></i>
-                    <i className="svg mysql" title="mysql"></i>
-                    <i className="svg mongodb" title="mongodb"></i>
-                    <i className="svg postgresql" title="postgresql"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="stack">
-                    <i className="svg html5"></i>
-                    <i className="svg css3"></i>
-                    <i className="svg sass"></i>
-                    <i className="svg cmd"></i>
-                    <i className="svg git"></i>
-                    <i className="svg aws"></i>
-                    <i className="svg heroku"></i>
-                    <i className="svg firebase"></i>
-                    <i className="svg netlify"></i>
-                  </div>
-                </td>
-              </tr>
-            </table>
+class App extends Component {
+  state = {
+    projects: [
+      {
+        title: 'Ara',
+        icon: ara_icon,
+        summary: 'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California.',
+        link: 'https://www.google.com'
+      },
+      {
+        title: 'Thistro',
+        icon: thistro_icon,
+        summary: 'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California.',
+        link: 'https://www.google.com'
+      },
+      {
+        title: 'Cyclosis',
+        icon: cyclosis_icon,
+        summary: 'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California.',
+        link: 'https://www.google.com'
+      },
+      {
+        title: 'Galaxy',
+        icon: galaxy_icon,
+        summary: 'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California.',
+        link: 'https://www.google.com'
+      },
+      {
+        title: 'Others',
+        icon: github_icon,
+        summary: 'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California.',
+        link: 'https://www.google.com'
+      },
+  ]}
+  render() {
+    const projects = this.state.projects.map((project, i) => {
+      return (
+        <div className='card' key={i}>
+          <div className='card-top'>
+            <img src={project.icon} alt={project.title} />
           </div>
-          <div className="card card-back">
-            <div className="contact">
-              <div className="card-personal-details">
-                <p><i className="svg email-icon"></i><a href='https://google.com'>mayarimawa@gmail.com</a></p>
-                <p><i className="svg telephone-icon"></i>+2349033243110</p>
-              </div>
-              <div className="card-professional-details">
-                <p><i className="svg github-icon"></i><a href="https://www.github.com/yarimawa">github.com/yarimawa</a></p>
-                <p><i className="svg linkedin-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">linkedin.com/in/abubakar-musa-0431171a7</a></p>
-              </div>
-            </div>
+          <div className='card-bottom'>
+            <h3>{project.title}</h3>
+            <p>{project.summary}</p>
+            <a href={project.link}>Visit Official Website <i className='svg arrow-right'></i></a>
           </div>
-        </section>
-        <section className="about" id='about'>
-          <p>
-            Full Stack Django-React Developer with a keen interest on web
-            traffic flows and cyber-security. 
-            Enthusiastic about the IT industry and would like to stamp a path
-            for other passionate developers.
-          </p>
-          <h4>TECHNOLOGIES AND FRAMEWORK</h4>
-          <p>Python | Django | Java | Javascript | ReactJS | Redux | Bootstrap | MySQL | MongoDB | PostgreSQL | HTML5 | CSS3 | SCSS | CL/CI | Git | AWS | Heroku | Firebase | Netlify</p>
-          <h4>CONTACT ME</h4>
-          <div className="contact" id='contact'>
-            <div className="card-personal-details">
-              <p><i className="svg email-icon"></i><a href='https://google.com'>mayarimawa@gmail.com</a></p>
-              <p><i className="svg telephone-icon"></i>+2349033243110</p>
-            </div>
-            <div className="card-professional-details">
-              <p><i className="svg github-icon"></i><a href="https://www.github.com/yarimawa">github.com/yarimawa</a></p>
-              <p><i className="svg linkedin-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">linkedin.com/in/abubakar-musa-0431171a7</a></p>
-            </div>
+        </div>
+      );
+    });
+    return (
+      <div className="App">
+        <header>
+          <h2><span style={{color: '#ff014f'}}>Hi, </span> I'm M. A. Yarimawa</h2>
+          <p style={{color: '#ff014f'}}>Full-Stack Developer</p>
+          <div className='sig-container'>
+            <img src={image} alt="avatar" />
           </div>
-        </section>
-        <section className="experience" id="experience">
-          <h3>EXPERIENCE</h3>
-          <h4>Elenal (Founder)</h4>
-          <i>Web Developer, Aug 2019 – Present</i>
-          <ul>
-            <li>Perform web site updates</li>
-            <li>Write, design, or edit web page content</li>
-            <li>Confer with management or development teams to prioritize needs, resolve conflicts, develop content criteria, or choose solutions</li>
-            <li>Back up files from web sites to local directories</li>
-            <li>Develop databases that support web applications and web sites.</li>
-            <li>Renew domain name registration</li>
-            <li>Write supporting code for web</li>
-          </ul>
-          <h4>Kankara Hills and Estate Developers (Contract)</h4>
-          <i>Web Developer, October 2022</i>
-          <ul>
-            <li>Built and deployed an AirBnb website</li>
-            <li>Visitors browse through a catalogue of housing infrastructures available for rent, or sale</li>
-          </ul>
-        </section>
-        <section className="projects">
-          <h3>PROJECTS</h3>
-          <a href='https://www.github.com/yarimawa/web-rat'>https://www.github.com/yarimawa/web-rat</a>
-          <i>Python</i>
-          <ul>
-            <li>Open-source project</li>
-            <li>Web scraping script to download contents from given urls</li>
-          </ul>
-          <a href='https://www.github.com/yarimawa/maze'>https://www.github.com/yarimawa/maze</a>
-          <i>Java</i>
-          <ul>
-            <li>Open-source project</li>
-            <li>A simple program that creates mazes for users to solve</li>
-            <li>If a maze has multiple solutions, the best solution is shown upon completion (solution with least steps/fastest route)</li>
-          </ul>
-          <a href='https://www.github.com/yarimawa/unpkg'>https://www.github.com/yarimawa/unpkg</a>
-          <i>Python</i>
-          <ul>
-            <li>Web scraping script with strict configurations to download npm packages on windows</li>
-            <li>It has proven to be faster than the conventional `npm install	` approach</li>
-          </ul>
-          <a href='https://www.github.com/yarimawa/auto-run'>https://www.github.com/yarimawa/auto-run</a>
-          <i>Python</i>
-          <ul>
-            <li>Open-source project</li>
-            <li>A python script that takes an absolute or relative file directory and configures such file to always run on start-up</li>
-          </ul>
-          <a href='https://www.github.com/yarimawa/racquetball'>https://www.github.com/yarimawa/racquetball</a>
-          <i>Python</i>
-          <ul>
-            <li>Open-source project</li>
-            <li>A simulation of a racquetball that moves from one end to another</li>
-          </ul>
-          <a href='https://www.github.com/yarimawa/snakejs'>https://www.github.com/yarimawa/snakejs</a>
-          <i>Javascript</i>
-          <ul>
-            <li>Open-source project</li>
-            <li>The traditional snake game</li>
-          </ul>
-        </section>
-        <section className="education">
-          <h3>EDUCATION</h3>
-          <h4>AHMADU BELLO UNIVERSITY - KADUNA, NIGERIA</h4>
-          <i>B.Sc. Economics 2017 - Present</i>
-          <ul>
-            <li>Relevant Coursework: YouTube Tutorials, Cisco Linux Unhatched Online Course, Udemy Tutorial Classes</li>
-          </ul>
-        </section>
-        <section className="certifications">
-          <h3>CERTIFICATIONS</h3>
-          <h4>AMADURS TECHNOLOGIES</h4>
-          <ul>
-            <li>ICT Capacity Building and Online Entrepreneurship Skill Development</li>
-          </ul>
-        </section>
+        </header>
+        <div className='container'>
+          <section className='about-me'>
+            <div className='title-box'>
+              <h3 className='title'>ABOUT ME</h3>
+            </div>
+            <p>
+              Full Stack Django-React Developer with a keen interest on web
+              traffic flows and cyber-security. 
+              Enthusiastic about the IT industry and would like to stamp a path
+              for other passionate developers.
+            </p>
+          </section>
+          <section className='tech-and-framework'>
+            <div className='title-box'>
+              <h3 className='title'>TECHNOLOGIES AND FRAMEWORK</h3>
+            </div>
+            <ul>
+              <li><i className="svg python" title="python"></i>Python</li>
+              <li><i className="svg django" title="django"></i>Django</li>
+              <li><i className="svg java" title="java"></i>Java</li>
+              <li><i className="svg javascript" title="javascript"></i>Javascript</li>
+              <li><i className="svg reactjs" title="reactjs"></i>ReactJS</li>
+              <li><i className="svg redux" title="redux"></i>Redux</li>
+              <li><i className="svg bootstrap" title="bootstrap"></i>Bootstrap</li>
+              <li><i className="svg mysql" title="mysql"></i>MySQL</li>
+              <li><i className="svg mongodb" title="mongodb"></i>MongoDB</li>
+              <li><i className="svg postgresql" title="postgresql"></i>PostgreSQL</li>
+              <li><i className="svg html5"></i>HTML5</li>
+              <li><i className="svg css3"></i>CSS3</li>
+              <li><i className="svg sass"></i>SCSS</li>
+              <li><i className="svg cmd"></i>CL/CI</li>
+              <li><i className="svg git"></i>Git</li>
+              <li><i className="svg aws"></i>AWS</li>
+              <li><i className="svg heroku"></i>Heroku</li>
+              <li><i className="svg firebase"></i>Firebase</li>
+              <li><i className="svg netlify"></i>Netlify</li>
+            </ul>
+          </section>
+          <section className='contact-me'>
+            <div className='title-box'>
+              <h3 className='title'>CONTACT ME</h3>
+            </div>
+            <ul>
+              <li><i className="svg email-icon"></i><a href='https://google.com'>mayarimawa</a></li>
+              <li><i className="svg github-icon"></i><a href="https://www.github.com/yarimawa">mayarimawa</a></li>
+              <li><i className="svg linkedin-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg twitter-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg facebook-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg instagram-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg whatsapp-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg telegram-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+              <li><i className="svg slack-icon"></i><a href="https://www.linkedin.com/in/abubakar-musa-0431171a7">mayarimawa</a></li>
+            </ul>
+          </section>
+          <section className='projects'>
+            <div className='title-box'>
+              <h3 className='title'>PROJECTS</h3>
+            </div>
+            <div className='projects-box'>
+              <div className='cards'>{ projects }</div>
+            </div>
+          </section>
+          <section className='new-info'>
+            <div className='title-box'>
+              <h3 className='title'>DID YOU KNOW?</h3>
+            </div>
+            <div>
+              <p>
+                Cisco Systems, Inc., commonly known as Cisco, is an 
+                American-based multinational digital communications 
+                technology conglomerate corporation headquartered in 
+                San Jose, California.
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
